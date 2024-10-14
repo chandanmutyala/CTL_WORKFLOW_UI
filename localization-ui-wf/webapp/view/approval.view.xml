@@ -1,0 +1,45 @@
+<mvc:View controllerName="com.mnea.localizationuiwf.controller.approval" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+xmlns:l="sap.ui.layout"
+xmlns:f="sap.ui.layout.form"
+xmlns:core="sap.ui.core"
+xmlns:form="sap.ui.layout.form"
+xmlns:smartForm="sap.ui.comp.smartform"
+xmlns="sap.m">
+    <Page id = "scroll">
+        <content>
+
+		
+
+        <form:SimpleForm id="request-information-form" editable="false" layout="ResponsiveGridLayout" singleContainerFullSize="false">
+            <form:content>
+                <core:Title id="vacation-timerange-heading" text="A new missing scope item has been received. Please review and confirm whether the requirements can be met or not."/>
+                <Label id="customer-name-label" text="Registered ID" labelFor="customer-name-field"/>
+                <Input id="customer-name-field" value="{context>/startEvent/autoId}" editable="false"/>
+
+                <Label id="order-number-label" text="Opportunity" labelFor="order-number-field"/>
+                <Input id="order-number-field" value="{context>/startEvent/oppurtunityNumber}" editable="false"/>
+                
+                <Label id="order-date-label" text="Scope Description" labelFor="order-date-field"/>
+                <Input id="order-date-field" value="{context>/startEvent/Description}" editable="false"/>
+
+                <Label id="shipping-country-label" text="Scope ID" labelFor="shipping-country-field"/>
+                <Input id="shipping-country-field" value="{context>/startEvent/ScopeItemID}" editable="false"/>
+
+                <Label id="expected-delivery-date-label" text="Priority" labelFor="expected-delivery-date-field"/>
+                <Input id="expected-delivery-date-field" value="{context>/startEvent/priority}" editable="false"/>
+
+				<Label id="goLiveData" text="Go Live Date" labelFor="order-amount-field"/>
+                <Input id="order-goLiveData-field" value="{context>/startEvent/goLiveDate}" editable="false"/>
+
+				<Label id="Country" text="Country" labelFor="order-amount-field"/>
+                <Input id="order-amo" value="{context>/startEvent/country}" editable="false"/>
+
+				<Label id="Created-By" text="Created By" labelFor="order-amount-field"/>
+                <Input id="order-createdBy-input" value="{context>/startEvent/createdBy}" editable="false"/>
+                
+            </form:content>
+        </form:SimpleForm>
+</content>
+		 </Page>
+        
+</mvc:View>
